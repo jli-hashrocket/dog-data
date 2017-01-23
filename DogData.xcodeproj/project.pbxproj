@@ -12,7 +12,28 @@
 		48D05DFB1E2AD07600666B08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D05DF91E2AD07600666B08 /* Main.storyboard */; };
 		48D05DFD1E2AD07600666B08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48D05DFC1E2AD07600666B08 /* Assets.xcassets */; };
 		48D05E001E2AD07600666B08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D05DFE1E2AD07600666B08 /* LaunchScreen.storyboard */; };
+		48D05E091E2AD09300666B08 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D05E071E2AD09300666B08 /* Realm.framework */; };
+		48D05E0C1E2AD0AC00666B08 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D05E0B1E2AD0AC00666B08 /* Dog.swift */; };
+		48D05E0E1E2AD17800666B08 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48D05E071E2AD09300666B08 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		48D05E0F1E2AD17800666B08 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D05E081E2AD09300666B08 /* RealmSwift.framework */; };
+		48D05E101E2AD17800666B08 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48D05E081E2AD09300666B08 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		48D05E151E2B094700666B08 /* AddDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D05E141E2B094700666B08 /* AddDogViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		48D05E111E2AD17800666B08 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				48D05E101E2AD17800666B08 /* RealmSwift.framework in Embed Frameworks */,
+				48D05E0E1E2AD17800666B08 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		48D05DF21E2AD07600666B08 /* DogData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogData.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +43,10 @@
 		48D05DFC1E2AD07600666B08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48D05DFF1E2AD07600666B08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48D05E011E2AD07600666B08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48D05E071E2AD09300666B08 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		48D05E081E2AD09300666B08 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		48D05E0B1E2AD0AC00666B08 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		48D05E141E2B094700666B08 /* AddDogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D05E0F1E2AD17800666B08 /* RealmSwift.framework in Frameworks */,
+				48D05E091E2AD09300666B08 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +65,8 @@
 		48D05DE91E2AD07600666B08 = {
 			isa = PBXGroup;
 			children = (
+				48D05E071E2AD09300666B08 /* Realm.framework */,
+				48D05E081E2AD09300666B08 /* RealmSwift.framework */,
 				48D05DF41E2AD07600666B08 /* DogData */,
 				48D05DF31E2AD07600666B08 /* Products */,
 			);
@@ -56,10 +85,12 @@
 			children = (
 				48D05DF51E2AD07600666B08 /* AppDelegate.swift */,
 				48D05DF71E2AD07600666B08 /* ViewController.swift */,
+				48D05E141E2B094700666B08 /* AddDogViewController.swift */,
 				48D05DF91E2AD07600666B08 /* Main.storyboard */,
 				48D05DFC1E2AD07600666B08 /* Assets.xcassets */,
 				48D05DFE1E2AD07600666B08 /* LaunchScreen.storyboard */,
 				48D05E011E2AD07600666B08 /* Info.plist */,
+				48D05E0B1E2AD0AC00666B08 /* Dog.swift */,
 			);
 			path = DogData;
 			sourceTree = "<group>";
@@ -74,6 +105,7 @@
 				48D05DEE1E2AD07600666B08 /* Sources */,
 				48D05DEF1E2AD07600666B08 /* Frameworks */,
 				48D05DF01E2AD07600666B08 /* Resources */,
+				48D05E111E2AD17800666B08 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,6 +170,8 @@
 			files = (
 				48D05DF81E2AD07600666B08 /* ViewController.swift in Sources */,
 				48D05DF61E2AD07600666B08 /* AppDelegate.swift in Sources */,
+				48D05E0C1E2AD0AC00666B08 /* Dog.swift in Sources */,
+				48D05E151E2B094700666B08 /* AddDogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +292,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = DogData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = projects.jeff.DogData;
@@ -270,6 +308,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = DogData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = projects.jeff.DogData;
