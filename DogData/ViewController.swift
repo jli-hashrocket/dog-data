@@ -17,7 +17,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        realmConnect()
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -51,7 +50,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.textLabel!.text = "\(dog.name) is \(dog.age) years old"
         return cell
     }
-
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            let dog = self.dogs![indexPath.row]
+            
+            do {
+                let realm = try! Realm()
+                try! realm.write {
+                 realm.delete(dog)
+                }
+            }
+            updateUI()
+        }
+    }
+    
 
 }
 
